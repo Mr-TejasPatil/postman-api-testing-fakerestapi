@@ -1,0 +1,262 @@
+{
+  "info": {
+    "_postman_id": "837884ed-87d6-4d86-af8e-5ca9cc085602",
+    "name": "CoverPhotos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46658994"
+  },
+  "item": [
+    {
+      "name": "Request 1",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "var jsondata = pm.response.json();\r",
+              "\r",
+              "pm.globals.set(\"coverPhotoID\", jsondata[4].id);\r",
+              "pm.globals.set(\"coverPhotoBookID\", jsondata[2].idBook);\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BaseURL}}/api/v1/CoverPhotos",
+          "host": [
+            "{{BaseURL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "CoverPhotos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Request 2",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"id\": 200,\r\n        \"idBook\": 200,\r\n        \"url\": \"https://placeholdit.imgix.net/~text?txtsize=33&txt=Book 3&w=250&h=350\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BaseURL}}/api/v1/CoverPhotos",
+          "host": [
+            "{{BaseURL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "CoverPhotos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Request 3",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"id\": 200,\r\n        \"idBook\": 200,\r\n        \"url\": \"https://placeholdit.imgix.net/~text?txtsize=33&txt=Book 3&w=250&h=350\"\r\n}"
+        },
+        "url": {
+          "raw": "{{BaseURL}}/api/v1/CoverPhotos/books/covers/{{coverPhotoBookID}}",
+          "host": [
+            "{{BaseURL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "CoverPhotos",
+            "books",
+            "covers",
+            "{{coverPhotoBookID}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Request 4",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"id\": 200,\r\n        \"idBook\": 200,\r\n        \"url\": \"https://placeholdit.imgix.net/~text?txtsize=33&txt=Book 3&w=250&h=350\"\r\n}"
+        },
+        "url": {
+          "raw": "{{BaseURL}}/api/v1/CoverPhotos/{{coverPhotoID}}",
+          "host": [
+            "{{BaseURL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "CoverPhotos",
+            "{{coverPhotoID}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Request 5",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"id\": 4,\r\n        \"idBook\": 3,\r\n        \"url\": \"https://placeholdit.imgix.net/~text?txtsize=33&txt=Book 3&w=250&h=350\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BaseURL}}/api/v1/CoverPhotos/{{coverPhotoID}}",
+          "host": [
+            "{{BaseURL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "CoverPhotos",
+            "{{coverPhotoID}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"id\": 4,\r\n        \"idBook\": 3,\r\n        \"url\": \"https://placeholdit.imgix.net/~text?txtsize=33&txt=Book 3&w=250&h=350\"\r\n}"
+        },
+        "url": {
+          "raw": "{{BaseURL}}/api/v1/CoverPhotos/{{coverPhotoID}}",
+          "host": [
+            "{{BaseURL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "CoverPhotos",
+            "{{coverPhotoID}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

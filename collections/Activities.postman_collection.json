@@ -1,0 +1,263 @@
+{
+  "info": {
+    "_postman_id": "f25b7990-768d-4f1d-bd20-f634bd43e90e",
+    "name": "Activities",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46658994"
+  },
+  "item": [
+    {
+      "name": "Request_1",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "\r",
+              "var jsondata = pm.response.json();\r",
+              "\r",
+              "pm.globals.set(\"id\", jsondata[28].id);"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities",
+          "protocol": "https",
+          "host": [
+            "fakerestapi",
+            "azurewebsites",
+            "net"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "Activities"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Response1",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://fakerestapi.azurewebsites.net//api/v1/Activities",
+              "protocol": "https",
+              "host": [
+                "fakerestapi",
+                "azurewebsites",
+                "net"
+              ],
+              "path": [
+                "",
+                "api",
+                "v1",
+                "Activities"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8; v=1.0"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 03 Jun 2026 06:24:02 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Kestrel"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "api-supported-versions",
+              "value": "1.0"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Activity 1\",\n        \"dueDate\": \"2026-06-03T07:24:02.6507237+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Activity 2\",\n        \"dueDate\": \"2026-06-03T08:24:02.650726+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Activity 3\",\n        \"dueDate\": \"2026-06-03T09:24:02.6507263+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Activity 4\",\n        \"dueDate\": \"2026-06-03T10:24:02.6507266+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Activity 5\",\n        \"dueDate\": \"2026-06-03T11:24:02.6507267+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 6,\n        \"title\": \"Activity 6\",\n        \"dueDate\": \"2026-06-03T12:24:02.6507276+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 7,\n        \"title\": \"Activity 7\",\n        \"dueDate\": \"2026-06-03T13:24:02.6507278+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 8,\n        \"title\": \"Activity 8\",\n        \"dueDate\": \"2026-06-03T14:24:02.650728+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 9,\n        \"title\": \"Activity 9\",\n        \"dueDate\": \"2026-06-03T15:24:02.6507282+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 10,\n        \"title\": \"Activity 10\",\n        \"dueDate\": \"2026-06-03T16:24:02.6507285+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 11,\n        \"title\": \"Activity 11\",\n        \"dueDate\": \"2026-06-03T17:24:02.6507288+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 12,\n        \"title\": \"Activity 12\",\n        \"dueDate\": \"2026-06-03T18:24:02.6507289+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 13,\n        \"title\": \"Activity 13\",\n        \"dueDate\": \"2026-06-03T19:24:02.6507291+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 14,\n        \"title\": \"Activity 14\",\n        \"dueDate\": \"2026-06-03T20:24:02.6507292+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 15,\n        \"title\": \"Activity 15\",\n        \"dueDate\": \"2026-06-03T21:24:02.6507294+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 16,\n        \"title\": \"Activity 16\",\n        \"dueDate\": \"2026-06-03T22:24:02.6507296+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 17,\n        \"title\": \"Activity 17\",\n        \"dueDate\": \"2026-06-03T23:24:02.6507298+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 18,\n        \"title\": \"Activity 18\",\n        \"dueDate\": \"2026-06-04T00:24:02.65073+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 19,\n        \"title\": \"Activity 19\",\n        \"dueDate\": \"2026-06-04T01:24:02.6507301+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 20,\n        \"title\": \"Activity 20\",\n        \"dueDate\": \"2026-06-04T02:24:02.6519764+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 21,\n        \"title\": \"Activity 21\",\n        \"dueDate\": \"2026-06-04T03:24:02.6519775+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 22,\n        \"title\": \"Activity 22\",\n        \"dueDate\": \"2026-06-04T04:24:02.6519777+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 23,\n        \"title\": \"Activity 23\",\n        \"dueDate\": \"2026-06-04T05:24:02.6519779+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 24,\n        \"title\": \"Activity 24\",\n        \"dueDate\": \"2026-06-04T06:24:02.651978+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 25,\n        \"title\": \"Activity 25\",\n        \"dueDate\": \"2026-06-04T07:24:02.6519782+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 26,\n        \"title\": \"Activity 26\",\n        \"dueDate\": \"2026-06-04T08:24:02.6519784+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 27,\n        \"title\": \"Activity 27\",\n        \"dueDate\": \"2026-06-04T09:24:02.6519785+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 28,\n        \"title\": \"Activity 28\",\n        \"dueDate\": \"2026-06-04T10:24:02.6519787+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 29,\n        \"title\": \"Activity 29\",\n        \"dueDate\": \"2026-06-04T11:24:02.6519789+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 30,\n        \"title\": \"Activity 30\",\n        \"dueDate\": \"2026-06-04T12:24:02.651979+00:00\",\n        \"completed\": true\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Request_2",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 31,\r\n  \"title\": \"Activity-31\",\r\n  \"dueDate\": \"2026-06-03T06:27:31.339Z\",\r\n  \"completed\": true\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BaseURL}}/api/v1/Activities",
+          "host": [
+            "{{BaseURL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "Activities"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Request3",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BaseURL}}/api/v1/Activities/{{id}}",
+          "host": [
+            "{{BaseURL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "Activities",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Request_4",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 31,\r\n  \"title\": \"Activity 31\",\r\n  \"dueDate\": \"2026-06-03T06:34:05.511Z\",\r\n  \"completed\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BaseURL}}/api/v1/Activities/{{id}}",
+          "host": [
+            "{{BaseURL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "Activities",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Request_5",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 31,\r\n  \"title\": \"Activity 31\",\r\n  \"dueDate\": \"2026-06-03T06:34:05.511Z\",\r\n  \"completed\": false\r\n}"
+        },
+        "url": {
+          "raw": "{{BaseURL}}/api/v1/Activities/{{id}}",
+          "host": [
+            "{{BaseURL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "Activities",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
